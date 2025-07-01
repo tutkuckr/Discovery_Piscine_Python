@@ -11,4 +11,5 @@ def convert(char):
 
 for char in val:
 	result += convert(char)
+#print(val.swapcase())
 print(result)
