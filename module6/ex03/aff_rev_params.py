@@ -6,7 +6,7 @@ length = len(args)
 if length < 3:
 	print("none")
 else:
-	while length > 0:
+	while length > 1:
 		print(args[length - 1])
-		length -= 1
+		length -= 1 
 		
