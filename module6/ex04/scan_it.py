@@ -5,10 +5,12 @@ import re
 if len(sys.argv) != 3:
 	print("none")
 else:
-	if len(re.findall(sys.argv[1], sys.argv[2])) == 0:
+	esc_substr = re.escape(sys.argv[1])
+	all_finds = re.findall(esc_substr, sys.argv[2])
+	if len(all_finds) == 0:
 		print("none")
 	else:
-		print(len(re.findall(sys.argv[1], sys.argv[2])))
+		print(len(all_finds))
 
 #• The first parameter is a keyword to search for in a string.
 #• The second parameter is the string to be searched.
